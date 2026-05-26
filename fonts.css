@@ -1,0 +1,8 @@
+/* 아모레퍼시픽 아리따 부리 — Medium (500) */
+@font-face {
+  font-family: 'Arita Buri';
+  src: url('https://cdn.jsdelivr.net/gh/sweetherofonts/fontshero_pack1/arita-buri/arita-buri-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
