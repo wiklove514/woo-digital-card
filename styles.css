@@ -345,6 +345,19 @@ body {
   padding: 0.5rem;
   border-radius: 12px;
   line-height: 0;
+  min-width: 112px;
+  min-height: 112px;
+}
+
+.qr-code img,
+.qr-code canvas {
+  display: block;
+  width: 112px;
+  height: 112px;
+}
+
+.qr-code table {
+  border-collapse: collapse;
 }
 
 .qr-label {

@@ -10,15 +10,41 @@ const CARD_INFO = `우인경 (Inkyeong Woo)
 031-8047-2043
 ikwoo@amorepacific.com`;
 
-const qrCanvas = document.getElementById('qrCode');
-if (qrCanvas && typeof QRCode !== 'undefined') {
+function initQrCode() {
+  const container = document.getElementById('qrCode');
+  if (!container) return;
+
   const detailUrl = new URL('detail.html', window.location.href).href;
-  QRCode.toCanvas(qrCanvas, detailUrl, {
-    width: 112,
-    margin: 1,
-    color: { dark: '#0a0e1a', light: '#ffffff' },
-  });
+  container.innerHTML = '';
+
+  if (typeof QRCode !== 'undefined') {
+    try {
+      new QRCode(container, {
+        text: detailUrl,
+        width: 112,
+        height: 112,
+        colorDark: '#0a0e1a',
+        colorLight: '#ffffff',
+        correctLevel: QRCode.CorrectLevel.M,
+      });
+      return;
+    } catch {
+      container.innerHTML = '';
+    }
+  }
+
+  const img = document.createElement('img');
+  img.width = 112;
+  img.height = 112;
+  img.alt = '경력 및 성과 QR 코드';
+  img.decoding = 'async';
+  img.src =
+    'https://api.qrserver.com/v1/create-qr-code/?size=112x112&color=0a0e1a&bgcolor=ffffff&data=' +
+    encodeURIComponent(detailUrl);
+  container.appendChild(img);
 }
+
+initQrCode();
 
 let toastTimer;
 
