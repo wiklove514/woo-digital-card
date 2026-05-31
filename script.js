@@ -36,7 +36,7 @@ function initQrCode() {
   const img = document.createElement('img');
   img.width = 112;
   img.height = 112;
-  img.alt = '경력 및 성과 QR 코드';
+  img.alt = '경력 및 전문 분야 QR 코드';
   img.decoding = 'async';
   img.src =
     'https://api.qrserver.com/v1/create-qr-code/?size=112x112&color=0a0e1a&bgcolor=ffffff&data=' +
