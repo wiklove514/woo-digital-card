@@ -14,7 +14,7 @@ function initQrCode() {
   const container = document.getElementById('qrCode');
   if (!container) return;
 
-  const detailUrl = new URL('detail.html', window.location.href).href;
+  const detailUrl = new URL('detail.html?v=3', window.location.href).href;
   container.innerHTML = '';
 
   if (typeof QRCode !== 'undefined') {
