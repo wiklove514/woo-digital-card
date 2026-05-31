@@ -528,7 +528,26 @@ body.detail-page {
   font-weight: 500;
   color: var(--accent);
   opacity: 0.8;
-  padding-top: 0.1rem;
+  padding-top: 0.15rem;
+}
+
+.achievement-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.achievement-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.achievement-desc {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
 }
 
 /* ── Hint & Font credit ── */
